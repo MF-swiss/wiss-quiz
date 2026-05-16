@@ -5,11 +5,11 @@ function Counter1() {
   const [istSichtbar, setIstSichtbar] = useState(true);
 
   const erhoehen = () => {
-    setCount(count + 1);
+    setCount(count + 5);
   };
 
   const verringern = () => {
-    setCount(count - 1);
+    setCount(count - 5);
   };
 
   const reset = () => {
@@ -29,8 +29,8 @@ function Counter1() {
       {istSichtbar && (
         <div>
           <p>Aktueller Zähler: {count}</p>
-          <button onClick={erhoehen}>Erhöhen</button>
-          <button onClick={verringern}>Verringern</button>
+          <button onClick={erhoehen}>Erhöhen +5</button>
+          <button onClick={verringern}>Verringern -5</button>
           <button onClick={reset}>Reset</button>
         </div>
       )}
