@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Counter from './Counter'
 import Questions from './Questions'
+import Counter1 from './Counter1'
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
         <p>Hier starten wir mit unserem Quiz.</p>
         <Welcome/>
         <Questions/>
+        <Counter1/>
+        <Counter1/>
         <Footer/>
       </div>
   )
