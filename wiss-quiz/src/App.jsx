@@ -3,6 +3,8 @@ import './App.css'
 import Welcome from './Welcome'
 import Header from './Header'
 import Footer from './Footer'
+import Counter from './Counter'
+import Questions from './Questions'
 
 function App() {
 
@@ -15,7 +17,11 @@ function App() {
         <h1>Willkommen beim WISS-Quiz!</h1>
         <p>Hier wird bald unser Quiz starten.</p>
         <Welcome/>
-        <button><h3><strong>Hier zur nächsten Frage</strong></h3></button>
+        <Questions/>
+
+        <Counter/>
+        <Counter/>
+        <button><h3><strong>Start</strong></h3></button>
         <Footer/>
       </div>
   )

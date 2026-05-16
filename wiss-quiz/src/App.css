@@ -11,6 +11,10 @@ button {
   cursor: pointer;
 }
 
+image {
+  padding: auto;
+}
+
 
 .counter {
   font-size: 16px;
