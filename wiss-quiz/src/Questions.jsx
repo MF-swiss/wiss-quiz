@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Counter from "./Counter";
 
 function Questions() {
     const fragen = [
@@ -16,13 +17,30 @@ function Questions() {
             frage: "Welcher Fluss fliesst durch Basel?",
             antworten: ["Aare", "Rhein", "Reuss"],
             korrekt: 1
+        },
+        {
+            frage: "Wann ist Wochenende?",
+            antworten: ["Jetzt", "Jetzt", "Jetzt"],
+            korrekt: [0, 1, 2]
         }
     ];
 
     const [aktuelleFrage, setAktuelleFrage] = useState(0);
     const [auswahl, setAuswahl] = useState(null);
+    const [score, setScore] = useState(0);
+
+    const frage = fragen[aktuelleFrage];
+
+
+    const istRichtig = (idx) =>
+        Array.isArray(frage.korrekt)
+            ? frage.korrekt.includes(idx)
+            : idx === frage.korrekt;
 
     const handleAntwort = (index) => {
+        if (istRichtig(index)) {
+            setScore((prev) => prev + 1);
+        }
         setAuswahl(index);
         setTimeout(() => {
             setAuswahl(null);
@@ -31,13 +49,17 @@ function Questions() {
     };
 
     if (aktuelleFrage >= fragen.length) {
-        return <div>Quiz beendet! 🎉</div>;
+        return (
+            <div>
+                <p>Quiz beendet! 🎉</p>
+                <Counter count={score} />
+            </div>
+        );
     }
-
-    const frage = fragen[aktuelleFrage];
 
     return (
         <div>
+            <Counter count={score} />
             <h3>{frage.frage}</h3>
             {frage.antworten.map((antwort, idx) => (
                 <button
@@ -46,7 +68,7 @@ function Questions() {
                     style={{
                         backgroundColor:
                             auswahl === idx
-                                ? idx === frage.korrekt
+                                ? istRichtig(idx)
                                     ? "lightgreen"
                                     : "salmon"
                                 : ""

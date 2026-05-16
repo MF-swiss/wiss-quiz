@@ -1,16 +1,8 @@
-import { useState } from 'react';
 
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  const erhoehen = () => {
-    setCount(count + 1);
-  };
-
+function Counter({ count }) {
   return (
     <div>
-      <p>Aktueller Zähler: {count}</p>
-      <button onClick={erhoehen}>Erhöhen</button>
+      <p>Anzahlt richtige Antworten: {count}</p>
     </div>
   );
 }

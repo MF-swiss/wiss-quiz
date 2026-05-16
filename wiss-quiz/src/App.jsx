@@ -15,13 +15,9 @@ function App() {
         <p></p>
         <img src={viteLogo} className="logo vite" alt="Vite logo"/>
         <h1>Willkommen beim WISS-Quiz!</h1>
-        <p>Hier wird bald unser Quiz starten.</p>
+        <p>Hier starten wir mit unserem Quiz.</p>
         <Welcome/>
         <Questions/>
-
-        <Counter/>
-        <Counter/>
-        <button><h3><strong>Start</strong></h3></button>
         <Footer/>
       </div>
   )
