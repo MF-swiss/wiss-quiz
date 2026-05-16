@@ -22,8 +22,8 @@ function Counter1() {
 
   return (
     <div>
-      <button onClick={toggle}>
-        {istSichtbar ? 'Counter verstecken' : 'Counter anzeigen'}
+      <button id='sight' onClick={toggle}>
+        {istSichtbar ? 'Counter verstecken 🫣' : 'Counter anzeigen 🤓'}
       </button>
 
       {istSichtbar && (
