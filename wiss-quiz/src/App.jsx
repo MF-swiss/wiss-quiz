@@ -15,7 +15,7 @@ function App() {
         <h1>Willkommen beim WISS-Quiz!</h1>
         <p>Hier wird bald unser Quiz starten.</p>
         <Welcome/>
-        <button>Hier zur nächsten Frage</button>
+        <button><h3><strong>Hier zur nächsten Frage</strong></h3></button>
         <Footer/>
       </div>
   )
