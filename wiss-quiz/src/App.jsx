@@ -19,8 +19,8 @@ function App() {
         <p>Hier starten wir mit unserem Quiz.</p>
         <Welcome/>
         <Questions/>
-        <Counter1/>
-        <Counter1/>
+        <Counter1 titel="Punktestand" startwert={0} schritt={1} max={99} />
+        <Counter1 titel="Lebenspunkte" startwert={100} schritt={50} max={300} />
         <Footer/>
       </div>
   )
