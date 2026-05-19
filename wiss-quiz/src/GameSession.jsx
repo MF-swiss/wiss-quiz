@@ -1,7 +1,4 @@
 import './App.css';
-import viteLogo from './assets/vite.svg'
-import Header from './Header'
-import Footer from './Footer'
 import Button from './Button'
 import { useState } from 'react'
 
@@ -28,10 +25,6 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <img src={viteLogo} className="logo vite" alt="Vite logo" />
-      <h1>Willkommen beim WISS-Quiz!</h1>
-
       <p>Punkte: {score}</p>
       <h2>{question.text}</h2>
       <div>
@@ -46,8 +39,6 @@ function App() {
       </div>
 
       {feedback && <p>{feedback}</p>}
-
-      <Footer />
     </div>
   );
 }
