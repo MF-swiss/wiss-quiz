@@ -4,7 +4,7 @@ function Counter({ startwert, schritt, titel, max }) {
   const [count, setCount] = useState(startwert);
   const [istSichtbar, setIstSichtbar] = useState(true);
   const [title, setTitel] = useState('Mein Counter:');
-  const [countClicks, setCountClicks] = useState(0);
+  const [countClicks, setCountClicks] = useState(startwert);
  
   const erhoehen = () => {
     setCount(count + schritt);
