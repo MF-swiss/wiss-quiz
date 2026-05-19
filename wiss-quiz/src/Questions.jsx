@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Counter from "./Counter";
+import Counter1 from "./Counter1";
 
 function Questions() {
     const fragen = [
@@ -52,14 +52,14 @@ function Questions() {
         return (
             <div>
                 <p>Quiz beendet! 🎉</p>
-                <Counter count={score} />
+                <Counter1 count={score} />
             </div>
         );
     }
 
     return (
         <div>
-            <Counter count={score} />
+            <Counter1 count={score} />
             <h3>{frage.frage}</h3>
             {frage.antworten.map((antwort, idx) => (
                 <button

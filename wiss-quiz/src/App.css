@@ -16,6 +16,7 @@ image {
 }
 
 
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -27,20 +28,19 @@ image {
   margin-bottom: 24px;
 }
 
+.counter:hover {
+  border-color: var(--accent-border);
+}
+.counter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 #sight {
   background-color: rgb(254, 209, 124);
   color: rgb(0, 0, 0);
   border-radius: 8px;
   font-size: large;
-}
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
 }
 
 .hero {
