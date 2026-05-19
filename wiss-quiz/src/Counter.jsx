@@ -3,46 +3,28 @@ import { useState } from 'react';
 function Counter({ startwert, schritt, titel, max }) {
   const [count, setCount] = useState(startwert);
   const [istSichtbar, setIstSichtbar] = useState(true);
-  const [title, setTitel] = useState('Mein Counter:');
+  const title = 'Mein Counter:';
   const [countClicks, setCountClicks] = useState(startwert);
  
-  const erhoehen = () => {
-    setCount(count + schritt);
-    setCountClicks(countClicks + 1);
-    if (count + schritt >= max) {
-      setCount(max);
-    }
-  };
- 
-  const verringern = () => {
-    setCount(count - schritt)
-    setCountClicks(countClicks + 1);
-    if (count - schritt <= 0) {
-        setCount(0);
-    }
- 
-  };
- 
-  const reset = () => {
-    setCount(startwert);
-    setCountClicks(countClicks + 1);
-  };
- 
-  const plusZehn = () => {
-    setCount(count + 10);
-    setCountClicks(countClicks + 1);
-    if (count + 10 >= max) {
-      setCount(max);
-    }
-  };
- 
-  const minusZehn = () => {
-    setCount(count - 10);
-    setCountClicks(countClicks + 1);
-    if (count - 10 <= 0) {
-        setCount(0);
-    }
-  };
+const erhoehen = () => {
+  setCount(Math.min(count + schritt, max));
+  setCountClicks(countClicks + 1);
+};
+
+const verringern = () => {
+  setCount(Math.max(count - schritt, 0));
+  setCountClicks(countClicks + 1);
+};
+
+const plusZehn = () => {
+  setCount(Math.min(count + 10, max));
+  setCountClicks(countClicks + 1);
+};
+
+const minusZehn = () => {
+  setCount(Math.max(count - 10, 0));
+  setCountClicks(countClicks + 1);
+};
  
   const toggle = () => {
     setIstSichtbar(!istSichtbar);

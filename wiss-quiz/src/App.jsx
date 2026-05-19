@@ -1,29 +1,55 @@
+import './App.css';
 import viteLogo from './assets/vite.svg'
-import './App.css'
-import Welcome from './Welcome'
 import Header from './Header'
 import Footer from './Footer'
-import Questions from './Questions'
-import Counter from './Counter'
+import Button from './Button'
+import { useState } from 'react'
+
+const question = {
+  text: "Welcher Begriff kommt im ICAO-Buchstabieralphabet zuerst?",
+  answers: ["Alfa", "Bravo", "Charlie"],
+  correctAnswer: "Alfa"
+};
 
 function App() {
+  const [feedback, setFeedback] = useState(null);
+  const [score, setScore] = useState(0);
+  const [isAnswered, setIsAnswered] = useState(false);
+
+  const handleAnswerClick = (selectedAnswer) => {
+    setIsAnswered(true);
+    if (selectedAnswer === question.correctAnswer) {
+      setFeedback("Richtig! 🎉");
+      setScore(score + 1);
+    } else {
+      setFeedback(`Falsch! Die richtige Antwort wäre: ${question.correctAnswer}`);
+    }
+  };
 
   return (
+    <div>
+      <Header />
+      <img src={viteLogo} className="logo vite" alt="Vite logo" />
+      <h1>Willkommen beim WISS-Quiz!</h1>
 
+      <p>Punkte: {score}</p>
+      <h2>{question.text}</h2>
       <div>
-        <Header/>
-        <p></p>
-        <img src={viteLogo} className="logo vite" alt="Vite logo"/>
-        <h1>Willkommen beim WISS-Quiz!</h1>
-        <p>Hier starten wir mit unserem Quiz.</p>
-        <Welcome/>
-        <Questions/>
-        <Counter titel="Punktestand" startwert={0} schritt={1} max={99} />
-        <Counter titel="Lebenspunkte" startwert={100} schritt={10} max={300} />
-        <Counter titel="Geldbeutel (CHF)" startwert={500} schritt={50} max={300} />
-        <Footer/>
+        {question.answers.map((answer) => (
+          <Button
+            key={answer}
+            text={answer}
+            onClick={() => handleAnswerClick(answer)}
+            disabled={isAnswered}
+          />
+        ))}
       </div>
-  )
+
+      {feedback && <p>{feedback}</p>}
+
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
