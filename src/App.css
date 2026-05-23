@@ -2,6 +2,11 @@ body {
   background: rgb(0, 30, 255);
 }
 
+.App-nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 button {
   background-color: #44ff00;
   color: #000000c7;

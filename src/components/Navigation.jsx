@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
     <nav className="App-nav">
-      <Link to="/">Home</Link>
-      <Link to="/quiz">Quiz</Link>
-      <Link to="/regeln">Regeln</Link>
-      <Link to="/impressum">Impressum</Link>
+      <NavLink to="/" end>Home</NavLink>
+      <NavLink to="/quiz">Quiz</NavLink>
+      <NavLink to="/regeln">Regeln</NavLink>
+      <NavLink to="/impressum">Impressum</NavLink>
     </nav>
   );
 }
 
 export default Navigation;
-
