@@ -50,7 +50,7 @@ const minusZehn = () => {
         <button onClick={plusZehn} disabled={count >= max}>+10</button>
         <button onClick={verringern} disabled={count <= 0}>-{schritt}</button>
         <button onClick={minusZehn} disabled={count <= 0}>-10</button>
-        <button onClick={reset}>Reset</button>
+        {/* <button onClick={reset}>Reset</button> */}
         <button onClick={resetClickCounter}>Reset anzahl aller buttons geklickt</button>
       </div>
      )}
