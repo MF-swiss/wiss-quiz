@@ -1,0 +1,210 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "category": "Sport",
+      "difficulty": "leicht",
+      "text": "Welches Land hat die meisten FIFA-Weltmeisterschaften gewonnen?",
+      "answers": ["Brasilien", "Italien", "Argentinien", "Deutschland"],
+      "correctAnswer": "Brasilien"
+    },
+    {
+      "id": "2",
+      "category": "Technologie",
+      "difficulty": "leicht",
+      "text": "Was bedeutet die Abkürzung 'HTTP'?",
+      "answers": [
+        "HyperText Transfer Protocol",
+        "HyperText Transmission Protocol",
+        "HyperText Transfer Program",
+        "HyperText Transmission Program"
+      ],
+      "correctAnswer": "HyperText Transfer Protocol"
+    },
+    {
+      "id": "3",
+      "category": "Geographie",
+      "difficulty": "mittel",
+      "text": "Welches ist der höchste Berg gemessen von seiner Unterwasserbasis?",
+      "answers": ["Mount Everest", "Mauna Kea", "K2", "Kangchenjunga"],
+      "correctAnswer": "Mauna Kea"
+    },
+    {
+      "id": "4",
+      "category": "Geschichte",
+      "difficulty": "mittel",
+      "text": "In welchem Jahr wurde die Schweizerische Eidgenossenschaft gegründet?",
+      "answers": ["1291", "1315", "1351", "1499"],
+      "correctAnswer": "1291"
+    },
+    {
+      "id": "5",
+      "category": "Sport",
+      "difficulty": "schwer",
+      "text": "Wieviele Spieler stehen bei einem Cricket Match auf dem Feld?",
+      "answers": ["9", "10", "11", "13"],
+      "correctAnswer": "13"
+    },
+
+    {
+      "id": "6",
+      "category": "Geographie",
+      "difficulty": "mittel",
+      "text": "In welchem europäischen Land gelten die EU-Drohnenregeln nur teilweise, weil es kein EU-Mitglied ist?",
+      "answers": ["Schweiz", "Österreich", "Belgien", "Portugal"],
+      "correctAnswer": "Schweiz"
+    },
+    {
+      "id": "7",
+      "category": "Geographie",
+      "difficulty": "leicht",
+      "text": "Welches Land verlangt für viele Drohnenflüge eine Genehmigung in Nationalparks?",
+      "answers": ["Spanien", "Dänemark", "Luxemburg", "Irland"],
+      "correctAnswer": "Spanien"
+    },
+    {
+      "id": "8",
+      "category": "Geographie",
+      "difficulty": "schwer",
+      "text": "In welchem Land ist das Fliegen über historischen Stadtzentren besonders streng reguliert?",
+      "answers": ["Italien", "Finnland", "Estland", "Ungarn"],
+      "correctAnswer": "Italien"
+    },
+    {
+      "id": "9",
+      "category": "Geographie",
+      "difficulty": "mittel",
+      "text": "Welches Land hat eine der detailliertesten öffentlich zugänglichen Drohnenkarten Europas?",
+      "answers": ["Niederlande", "Slowenien", "Bulgarien", "Zypern"],
+      "correctAnswer": "Niederlande"
+    },
+    {
+      "id": "10",
+      "category": "Geographie",
+      "difficulty": "leicht",
+      "text": "In welchem Land ist die maximale Standardflughöhe für Drohnen ebenfalls 120 Meter wie in der EU?",
+      "answers": ["Norwegen", "Malta", "Tschechien", "Griechenland"],
+      "correctAnswer": "Norwegen"
+    },
+    {
+      "id": "11",
+      "category": "Geschichte",
+      "difficulty": "leicht",
+      "text": "Wann trat die EU-Drohnenverordnung 2019/947 offiziell in Kraft?",
+      "answers": ["2021", "2018", "2016", "2023"],
+      "correctAnswer": "2021"
+    },
+    {
+      "id": "12",
+      "category": "Geschichte",
+      "difficulty": "mittel",
+      "text": "Welches Land führte früh eine verpflichtende Online-Schulung für Drohnenpiloten ein?",
+      "answers": ["Frankreich", "Polen", "Lettland", "Kroatien"],
+      "correctAnswer": "Frankreich"
+    },
+    {
+      "id": "13",
+      "category": "Geschichte",
+      "difficulty": "schwer",
+      "text": "Welches Jahr markiert den Beginn der europaweiten Harmonisierung der Drohnengesetze durch die EASA?",
+      "answers": ["2019", "2014", "2022", "2011"],
+      "correctAnswer": "2019"
+    },
+    {
+      "id": "14",
+      "category": "Geschichte",
+      "difficulty": "mittel",
+      "text": "Welches Land veröffentlichte als eines der ersten nationale Drohnenkarten im EU-Standardformat?",
+      "answers": ["Niederlande", "Rumänien", "Slowakei", "Irland"],
+      "correctAnswer": "Niederlande"
+    },
+    {
+      "id": "15",
+      "category": "Geschichte",
+      "difficulty": "leicht",
+      "text": "Welches Land führte früh ein nationales Drohnenführerschein-System ein?",
+      "answers": ["Österreich", "Belgien", "Schweden", "Litauen"],
+      "correctAnswer": "Österreich"
+    },
+    {
+      "id": "16",
+      "category": "Sport",
+      "difficulty": "mittel",
+      "text": "Welche Drohnenkategorie wird häufig für FPV-Racing genutzt?",
+      "answers": ["A3", "A1", "C1", "Specific"],
+      "correctAnswer": "A3"
+    },
+    {
+      "id": "17",
+      "category": "Sport",
+      "difficulty": "leicht",
+      "text": "Welche Art von Drohnen wird oft für Sportveranstaltungen zur Kameraverfolgung eingesetzt?",
+      "answers": ["Specific-Kategorie-Drohnen", "C0-Spielzeugdrohnen", "Indoor-Mikrodrohnen", "Ballon-Drohnen"],
+      "correctAnswer": "Specific-Kategorie-Drohnen"
+    },
+    {
+      "id": "18",
+      "category": "Sport",
+      "difficulty": "schwer",
+      "text": "Welche maximale Geschwindigkeit ist bei FPV-Rennen in Europa typischerweise erlaubt?",
+      "answers": ["Es gibt keine feste Grenze", "60 km/h", "90 km/h", "150 km/h"],
+      "correctAnswer": "Es gibt keine feste Grenze"
+    },
+    {
+      "id": "19",
+      "category": "Sport",
+      "difficulty": "mittel",
+      "text": "Welche Drohnenklasse wird häufig für professionelle Sportfilmaufnahmen genutzt?",
+      "answers": ["Specific", "A2", "C0", "A1"],
+      "correctAnswer": "Specific"
+    },
+    {
+      "id": "20",
+      "category": "Sport",
+      "difficulty": "leicht",
+      "text": "Welche Art von Drohnen wird oft für Indoor-Rennen verwendet?",
+      "answers": ["Kleine FPV-Drohnen", "C3-Drohnen", "C2-Drohnen", "Autonome Lieferdrohnen"],
+      "correctAnswer": "Kleine FPV-Drohnen"
+    },
+    {
+      "id": "21",
+      "category": "Technologie",
+      "difficulty": "leicht",
+      "text": "Wie heißt die Pflicht, dass Drohnen ihre Position in Echtzeit senden müssen?",
+      "answers": ["Remote ID", "Geo-Tagging", "Signal Beacon", "Live Sync"],
+      "correctAnswer": "Remote ID"
+    },
+    {
+      "id": "22",
+      "category": "Technologie",
+      "difficulty": "mittel",
+      "text": "Welche Kennzeichnung tragen Drohnen, die nach EU-Standards klassifiziert sind?",
+      "answers": ["C-Klassen", "F-Klassen", "R-Klassen", "X-Klassen"],
+      "correctAnswer": "C-Klassen"
+    },
+    {
+      "id": "23",
+      "category": "Technologie",
+      "difficulty": "schwer",
+      "text": "Wie heißt das System, das Drohnen daran hindert, in verbotene Zonen einzufliegen?",
+      "answers": ["Geo-Fencing", "Auto-Return", "Signal Shielding", "Zone Guard"],
+      "correctAnswer": "Geo-Fencing"
+    },
+    {
+      "id": "24",
+      "category": "Technologie",
+      "difficulty": "mittel",
+      "text": "Welche Drohnenkategorie erlaubt Flüge nah an unbeteiligten Personen, wenn die Drohne C1-zertifiziert ist?",
+      "answers": ["A1", "A2", "A3", "Specific"],
+      "correctAnswer": "A1"
+    },
+    {
+      "id": "25",
+      "category": "Technologie",
+      "difficulty": "schwer",
+      "text": "Wie heißt die Zone, in der Drohnenflüge nur mit Genehmigung erlaubt sind?",
+      "answers": ["Restricted Zone", "Open Zone", "Free Fly Area", "Neutral Zone"],
+      "correctAnswer": "Restricted Zone"
+    }
+  ]
+}
