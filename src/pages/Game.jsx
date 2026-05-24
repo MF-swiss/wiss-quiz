@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import GameSession from "../components/GameSession";
-
-const API_URL = import.meta.env.VITE_API_URL;
+import { getAllQuestions } from "../api/questions";
 
 function Game() {
   const [questions, setQuestions] = useState([]);
@@ -11,11 +10,7 @@ function Game() {
   useEffect(() => {
     async function loadQuestions() {
       try {
-        const response = await fetch(`${API_URL}/questions`);
-        if (!response.ok) {
-          throw new Error("Fragen konnten nicht geladen werden");
-        }
-        const data = await response.json();
+        const data = await getAllQuestions();
         setQuestions(data);
       } catch (err) {
         setError(err.message);
@@ -25,6 +20,7 @@ function Game() {
     }
     loadQuestions();
   }, []);
+
 
   if (isLoading) {
     return (

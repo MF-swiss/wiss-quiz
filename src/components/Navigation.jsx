@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+
 function Navigation() {
   return (
     <nav className="App-nav">
@@ -7,6 +8,7 @@ function Navigation() {
       <NavLink to="/quiz">Quiz</NavLink>
       <NavLink to="/regeln">Regeln</NavLink>
       <NavLink to="/impressum">Impressum</NavLink>
+      <NavLink to="/admin">Admin</NavLink>
     </nav>
   );
 }

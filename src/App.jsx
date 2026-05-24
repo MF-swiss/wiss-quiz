@@ -5,6 +5,7 @@ import Game from "./pages/Game";
 import Rules from "./pages/Rules";
 import Impressum from "./pages/Impressum";
 import "./App.css";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="quiz" element={<Game />} />
         <Route path="regeln" element={<Rules />} />
         <Route path="impressum" element={<Impressum />} />
+        <Route path="admin" element={<Admin />} />
       </Route>
     </Routes>
   );
