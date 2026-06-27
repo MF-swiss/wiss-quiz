@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="QuizbackendApplication" type="Spring Boot" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="ch.wiss.quizbackend.QuizbackendApplication" />
+    <module name="quizbackend" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
