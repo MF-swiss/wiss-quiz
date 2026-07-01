@@ -3,6 +3,7 @@ package ch.wiss.quizbackend.service;
 import ch.wiss.quizbackend.dto.QuestionFormDTO;
 import ch.wiss.quizbackend.model.Question;
 import ch.wiss.quizbackend.repository.QuestionRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,6 +21,21 @@ class QuestionServiceTest {
 
     @Autowired
     private QuestionRepository questionRepository;
+
+    @BeforeEach
+    void setUpTestData() {
+        questionRepository.deleteAll();
+
+        Question seeded = new Question();
+        seeded.setId("1");
+        seeded.setText("Wie viele Spieler stehen pro Mannschaft beim Fussball gleichzeitig auf dem Platz?");
+        seeded.setCategory("Sport");
+        seeded.setDifficulty("leicht");
+        seeded.setAnswers(List.of("9", "10", "11", "12"));
+        seeded.setCorrectAnswer("11");
+
+        questionRepository.save(seeded);
+    }
 
     @Test
     void getAllQuestionsReturnsData() {

@@ -70,10 +70,9 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- @WebMvcTest (Controller-Slice-Tests) -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
