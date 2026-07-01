@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/questions")
 public class QuestionController {
 
     private final QuestionService questionService;
@@ -26,7 +27,7 @@ public class QuestionController {
      * Gibt alle Fragen zurück
      * @return Returniert eine Liste mit allen Fragen
      */
-    @GetMapping("/api/questions")
+    @GetMapping
     public List<Question> getQuestions() {
         return questionService.getAllQuestions();
 
@@ -37,36 +38,36 @@ public class QuestionController {
      * @param id Parameter id der geforderten Frage
      * @return Returniert die Frage mit der gewünschten id
      */
-    @GetMapping("/api/questions/{id}")
+    @GetMapping("/{id}")
     public Question getQuestionById(@PathVariable String id) {
         return questionService.getQuestionById(id);
     }
 
-    @PostMapping("/api/questions")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Question createQuestion(@Valid @RequestBody QuestionFormDTO form) {
         return questionService.createQuestion(form);
     }
 
 
-    @PutMapping("/api/questions/{id}")
+    @PutMapping("/{id}")
     public Question updateQuestion(@PathVariable String id, @Valid @RequestBody QuestionFormDTO form) {
         return questionService.updateQuestion(id, form);
     }
 
-    @DeleteMapping("/api/questions/{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteQuestion(@PathVariable String id) {
         questionService.deleteQuestion(id);
     }
 
 
-    @GetMapping("/api/questions/category/{category}")
+    @GetMapping("/category/{category}")
     public List<Question> getQuestionsByCategory(@PathVariable String category) {
         return questionService.getQuestionByCategory(category);
     }
 
-    @GetMapping("/api/questions/difficulty/{difficulty}")
+    @GetMapping("/difficulty/{difficulty}")
     public List<Question> getQuestionsByDifficulty(@PathVariable String difficulty) {
         return questionService.getQuestionsByDifficulty(difficulty);
     }
@@ -83,7 +84,7 @@ public class QuestionController {
      * </ul>
      * </p>
      */
-    @GetMapping("/api/questions/random")
+    @GetMapping("/random")
     public List<Question> getRandomQuestions(
             @RequestParam(required = false) String category,
             @RequestParam(required = false) String difficulty,

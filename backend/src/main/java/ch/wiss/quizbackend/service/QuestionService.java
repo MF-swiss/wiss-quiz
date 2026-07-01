@@ -31,9 +31,24 @@ public class QuestionService {
     }
 
     /**
-     * Liefert eine einzelne Frage anhand ihrer ID, oder null, wenn es sie nicht gibt.
-     * @param id
-     * @return
+     * Lädt eine einzelne Frage anhand ihrer ID.
+     *
+     * <p>Diese Methode wird vom Frontend genutzt, um die Detailansicht
+     * einer Frage zu füllen.</p>
+     *
+     * <p>Mögliche Antworten:</p>
+     * <ul>
+     *   <li><b>200 OK</b> – die Frage wurde gefunden</li>
+     *   <li><b>404 Not Found</b> – keine Frage mit dieser ID</li>
+     * </ul>
+     *
+     * <p>Beispielaufruf:</p>
+     * <pre>{@code GET /api/questions/42}</pre>
+     *
+     * @param id die eindeutige ID der Frage, z.B. {@code "42"}
+     * @return die gefundene {@link Question}
+     * @throws QuestionNotFoundException wenn keine Frage mit dieser ID existiert
+     * @see QuestionService#getQuestionById(String)
      */
     public Question getQuestionById(String id) {
         return questionRepository.findById(id)
@@ -41,10 +56,10 @@ public class QuestionService {
     }
 
     /**
-     * Erstellt eine neue Frage. Die id wird hier vom Server erzeugt,
-     * damit der Client sich keine eindeutige id ausdenken muss.
-     * @param form
-     * @return
+     * Erstellt eine neue Frage aus den übergebenen Formulardaten.
+     * Die ID wird serverseitig generiert.
+     * @param form die validierten Eingabedaten der neuen Frage
+     * @return die gespeicherte {@link Question} inklusive generierter ID
      */
     public Question createQuestion(QuestionFormDTO form) {
         String id = UUID.randomUUID().toString();
@@ -56,9 +71,10 @@ public class QuestionService {
     /**
      * Aktualisiert eine bestehende Frage. Die id stammt aus der URL
      * und ist damit die einzige Quelle der Wahrheit.
-     * @param id
-     * @param form
-     * @return
+     * @param id die ID der gesuchten Frage
+     * @param form die validierten Eingabedaten der zu aktualisierenden Frage
+     * @return die aktualiserte {@link Question} mit der gesuchten ID
+     * @throws QuestionNotFoundException wenn keine Frage mit dieser ID existiert
      */
     public Question updateQuestion(String id, QuestionFormDTO form) {
         if(!questionRepository.existsById(id)) {
@@ -82,17 +98,17 @@ public class QuestionService {
 
     /**
      * Liefert alle Fragen einer bestimmten Kategorie.
-     * @param category
-     * @return
+     * @param category die gewünschte Kategorie der Fragen
+     * @return die {@link List<Question>} der gesuchten Kategorie
      */
     public List<Question> getQuestionByCategory(String category) {
         return questionRepository.findByCategory(category);
     }
 
     /**
-     * Liefert alle Freagen einer bestimmten Schwierigkeit.
-     * @param difficulty
-     * @return
+     * Liefert alle Fragen einer bestimmten Schwierigkeit.
+     * @param difficulty die gewünschte Schwierigkeit der Fragen
+     * @return die {@link List<Question>} der gesuchten Schwierigkeit
      */
     public List<Question> getQuestionsByDifficulty(String difficulty) {
         return questionRepository.findByDifficulty(difficulty);
@@ -118,6 +134,13 @@ public class QuestionService {
 //    }
 
 
+    /**
+     * Gibt eine Liste von zufälligen Fragen zurück.
+     * @param category Optional die Kategorie der zufälligen Fragen
+     * @param difficulty Optional die Schwierigkeit der zufälligen Fragen
+     * @param count Optional die Anzahl der Fragen
+     * @return die {@link List<Question>} der zufälligen Fragen
+     */
     public List<Question> getRandomQuestions(String category, String difficulty, int count) {
         List<Question> pool;
 
