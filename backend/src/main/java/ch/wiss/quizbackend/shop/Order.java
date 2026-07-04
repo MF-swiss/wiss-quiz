@@ -34,8 +34,7 @@ public class Order {
     }
 
     /**
-     * Fügt eine Position hinzu und hält BEIDE Seiten
-     * der Beziehung synchron.
+     * Fügt eine Position hinzu und hält BEIDE Seiten der Beziehung synchron.
      */
     public void addItem(OrderItem item) {
         items.add(item);
@@ -48,4 +47,28 @@ public class Order {
     }
 
     // --- Getter / Setter ---
+    public Long getId() {
+        return id;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public List<OrderItem> getItems() {
+        return items;
+    }
+
 }
